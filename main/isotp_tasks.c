@@ -68,7 +68,10 @@ void isotp_send_queue_task(void *arg)
         send_message_t msg;
         xQueueReceive(isotp_send_message_queue, &msg, portMAX_DELAY);
         xSemaphoreTake(isotp_mutex, (TickType_t)100);
+        
         ESP_LOGI(ISOTP_TASKS_TAG, "isotp_send_queue_task: sending message with %d size (rx id: %08x / tx id: %08x)", msg.msg_length, msg.rx_id, msg.tx_id);
+      //  printf("sending\n");
+        //printf(msg.rx_id);
         // flipped
         int isotp_link_container_index = find_isotp_link_container_index_by_receive_arbitration_id(msg.tx_id);
         assert(isotp_link_container_index != -1);

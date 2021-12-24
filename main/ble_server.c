@@ -39,7 +39,7 @@
 #define SPP_PROFILE_NUM             1
 #define SPP_PROFILE_APP_IDX         0
 #define ESP_SPP_APP_ID              0x56
-#define DEVICE_NAME_GAP             "BLE_TO_ISOTP"    //The Device Name Characteristics in GAP
+#define DEVICE_NAME_GAP             "RJAutomotive-RemoteOBDv3"    //The Device Name Characteristics in GAP
 #define SPP_SVC_INST_ID             0
 
 /// SPP Service
@@ -59,7 +59,7 @@ static const uint8_t spp_adv_data[23] = {
     /* Complete List of 16-bit Service Class UUIDs */
     0x03,0x03,0xF0,0xAB,
     /* Complete Local Name in advertising */
-    0x0F,0x09, 'B', 'L', 'E', '_', 'T', 'O', '_', 'I', 'S', 'O', 'T','P'
+    0x0F,0x09, 'R', 'E', 'M', 'O', 'T', 'E', 'O', 'B', 'D', 'V', '3'
 };
 
 static ble_server_callbacks server_callbacks;

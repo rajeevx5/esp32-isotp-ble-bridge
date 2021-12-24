@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"terminal.integrated.automationShell.windows": "cmd.exe",
+		"terminal.intergrated.shellArgs.windows": [
+			"/k",
+			"C:/users/rajee/esp/esp-idf/export.bat"
+		]
+	}
+}

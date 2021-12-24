@@ -11,8 +11,8 @@
 #include "assert.h"
 #include "isotp.h"
 #include "ble_server.h"
-//#include "wifi_server.h"
-//#include "web_server.h"
+#include "wifi_server.h"
+#include "web_server.h"
 #include "ws2812_control.h"
 #include "messages.h"
 #include "queues.h"
@@ -40,7 +40,7 @@
 void app_main(void)
 {
     // turn off logs for production
-    esp_log_level_set("*", ESP_LOG_NONE);
+    esp_log_level_set("*", ESP_LOG_INFO);
     // Configure LED enable pin (switches transistor to push LED)
     gpio_config_t io_conf_led;
     io_conf_led.intr_type = GPIO_INTR_DISABLE;
